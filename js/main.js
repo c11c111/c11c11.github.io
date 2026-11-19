@@ -87,6 +87,30 @@ document.addEventListener('DOMContentLoaded', function () {
     bars.forEach(b => bObs.observe(b));
   }
 
+  // ---- Lightbox for image galleries ----
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox) {
+    const lbImg = lightbox.querySelector('img');
+    const lbTitle = lightbox.querySelector('.lb-cap .t');
+    const lbSub = lightbox.querySelector('.lb-cap small');
+    const lbClose = lightbox.querySelector('.lb-close');
+    function closeLB() { lightbox.classList.remove('open'); }
+    document.querySelectorAll('[data-lightbox]').forEach(el => {
+      el.addEventListener('click', () => {
+        const src = el.getAttribute('data-src') || (el.querySelector('img') && el.querySelector('img').getAttribute('src'));
+        const cap = el.getAttribute('data-cap') || (el.querySelector('.cap') && el.querySelector('.cap').textContent.trim()) || '';
+        if (src) { lbImg.setAttribute('src', src); }
+        if (lbTitle) lbTitle.textContent = cap;
+        if (lbSub) lbSub.textContent = el.getAttribute('data-sub') || '影像记录';
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    if (lbClose) lbClose.addEventListener('click', () => { closeLB(); document.body.style.overflow = ''; });
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) { closeLB(); document.body.style.overflow = ''; } });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closeLB(); document.body.style.overflow = ''; } });
+  }
+
   // ---- Contact form (demo) ----
   const form = document.getElementById('contactForm');
   if (form) {

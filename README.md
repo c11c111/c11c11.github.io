@@ -13,13 +13,20 @@ resume-site/
 ├── statement.html    # 自述与推荐（个人陈述/推荐信/自荐信）
 ├── contact.html      # 联系我
 ├── css/style.css     # 设计系统与样式
-├── js/main.js        # 交互
-├── assets/resume.pdf # 简历 PDF
+├── js/main.js        # 交互（含图片灯箱）
+├── assets/
+│   ├── img/          # 图片素材（人像、证书、项目图、活动照）
+│   └── resume.pdf    # 简历 PDF（未在前台提供下载）
 └── .nojekyll
 ```
 
 ## 内容来源
-内容整合自 8 份简历文件 + 5 份保研材料（自荐信、个人陈述、推荐信×2、简历专硕）。
+内容整合自 8 份简历文件 + 5 份保研材料（自荐信、个人陈述、推荐信×2、简历专硕），图片取自「深大红色.pptx」，人像已抠去白底以适配深色主题。
+
+## 图片说明
+- `assets/img/portrait.png`：个人肖像（已去背景）
+- `cert-*.jpg`：获奖证书；`proj-*.jpg`：项目架构/论文海报；`exp-*.jpg`：实践与活动照片
+- 所有画廊图片支持点击放大（灯箱）
 
 ## 部署到 GitHub Pages
 推送到 `c11c111.github.io` 仓库的 `main` 分支即可，Pages 会自动重新构建。
@@ -27,4 +34,5 @@ resume-site/
 ## 自定义修改
 - 配色：`css/style.css` 顶部的 `:root` CSS 变量。
 - 联系方式：搜索 `17833952955` 或 `陈晋钦` 批量替换。
-- 更新简历：替换 `assets/resume.pdf`。
+- 更换照片：替换 `assets/img/` 下同名文件即可；证书/活动照图片名见上表。
+- 注：已按需求移除前台所有「下载简历」入口。

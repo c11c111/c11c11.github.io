@@ -87,6 +87,39 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal"><span class="section-num">03</span><span class="eyebrow">Gallery</span><h2>实践剪影</h2><p class="sub">从实验室到竞赛现场，从志愿服务到团队合影——每一步都算数。</p><div class="gold-rule"></div></div>
+    <div class="photo-gallery">
+      <div class="gallery-item wide reveal" data-lightbox data-src="assets/img/exp-acm-province.jpg" data-cap="2026 五邑大学第二届 ACM 程序设计竞赛" data-sub="学生工作 · 学科竞赛">
+        <img src="assets/img/exp-acm-province.jpg" alt="ACM 程序设计竞赛合影" loading="lazy">
+        <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span>
+        <div class="cap"><small>ACM 竞赛</small>组织校内算法赛事，营造编程氛围</div>
+      </div>
+      <div class="gallery-item reveal" data-lightbox data-src="assets/img/exp-acm-fresh.jpg" data-cap="五邑大学 ACM 新生赛现场" data-sub="学生工作">
+        <img src="assets/img/exp-acm-fresh.jpg" alt="ACM 新生赛现场" loading="lazy">
+        <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span>
+        <div class="cap"><small>新生赛</small>带领同学踏上算法之路</div>
+      </div>
+      <div class="gallery-item reveal" data-lightbox data-src="assets/img/exp-lab.jpg" data-cap="实验室科研讨论" data-sub="科研探索">
+        <img src="assets/img/exp-lab.jpg" alt="实验室科研讨论" loading="lazy">
+        <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span>
+        <div class="cap"><small>实验室</small>在交流中打磨研究细节</div>
+      </div>
+      <div class="gallery-item reveal" data-lightbox data-src="assets/img/exp-volunteer.jpg" data-cap="三下乡志愿服务活动" data-sub="志愿服务 · 300h+">
+        <img src="assets/img/exp-volunteer.jpg" alt="志愿服务合影" loading="lazy">
+        <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span>
+        <div class="cap"><small>志愿服务</small>累计义工 300 小时以上</div>
+      </div>
+      <div class="gallery-item reveal" data-lightbox data-src="assets/img/exp-team.jpg" data-cap="团队合影" data-sub="团队协作">
+        <img src="assets/img/exp-team.jpg" alt="团队合影" loading="lazy">
+        <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span>
+        <div class="cap"><small>团队</small>与伙伴们共同成长</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -98,6 +131,13 @@
   </div>
 </footer>
 <button id="toTop" aria-label="返回顶部"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="图片查看">
+  <button class="lb-close" aria-label="关闭"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+  <img src="" alt="预览图">
+  <div class="lb-cap"><small></small><span class="t"></span></div>
+</div>
+
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="js/main.js"></script>
 </body>

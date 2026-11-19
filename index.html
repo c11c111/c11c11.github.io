@@ -43,9 +43,6 @@
         <a href="projects.html" class="btn btn-gold">探索科研作品
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="assets/resume.pdf" target="_blank" class="btn btn-line">下载简历
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12M7 10l5 5 5-5M4 19h16"/></svg>
-        </a>
       </div>
       <div class="hero-meta">
         <div class="m">学术排名<b>推免 2 / 55 · 前 5%</b></div>
@@ -56,8 +53,9 @@
     <div class="hero-visual">
       <div class="portrait">
         <div class="corner c1"></div><div class="corner c2"></div>
-        <div class="frame">
-          <div class="monogram">陈<small>晋钦</small></div>
+        <div class="frame portrait-frame">
+          <img class="portrait-img" src="assets/img/portrait.png" alt="陈晋钦肖像">
+          <div class="monogram-bg">陈</div>
         </div>
         <span class="tag-vert">Computer Science · Wuyi University</span>
         <div class="badge-float">
@@ -186,6 +184,37 @@
   </div>
 </section>
 
+<!-- MOMENTS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="section-num">04</span>
+      <span class="eyebrow">Moments</span>
+      <h2>瞬间与足迹</h2>
+      <p class="sub">在竞赛、实践与志愿服务中留下的身影，记录技术之外的成长。</p>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="photo-gallery">
+      <div class="gallery-item wide reveal" data-lightbox data-src="assets/img/exp-acm-province.jpg" data-cap="2026 五邑大学第二届 ACM 程序设计竞赛 · 合影" data-sub="学科竞赛">
+        <img src="assets/img/exp-acm-province.jpg" alt="ACM 程序设计竞赛合影" loading="lazy">
+        <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span>
+        <div class="cap"><small>ACM · 2026</small>组织与参与校内算法赛事</div>
+      </div>
+      <div class="gallery-item reveal" data-lightbox data-src="assets/img/exp-volunteer.jpg" data-cap="三下乡志愿服务活动" data-sub="志愿服务">
+        <img src="assets/img/exp-volunteer.jpg" alt="志愿服务合影" loading="lazy">
+        <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span>
+        <div class="cap"><small>Volunteer</small>累计义工 300h+</div>
+      </div>
+      <div class="gallery-item reveal" data-lightbox data-src="assets/img/exp-lab.jpg" data-cap="实验室科研讨论" data-sub="科研探索">
+        <img src="assets/img/exp-lab.jpg" alt="实验室科研讨论" loading="lazy">
+        <span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4M11 8v6M8 11h6"/></svg></span>
+        <div class="cap"><small>Research</small>在交流中打磨想法</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem" class="reveal"><a href="experience.html" class="btn btn-line">更多实践经历 →</a></div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-band">
   <div class="container reveal">
@@ -207,7 +236,7 @@
         <p>计算机科学与技术专业学生，专注视觉算法与人工智能应用。用代码解决问题，用分享传递价值。</p>
         <div class="social-row">
           <a href="mailto:17833952955@163.com" aria-label="邮箱"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg></a>
-          <a href="assets/resume.pdf" target="_blank" aria-label="简历"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></a>
+          <a href="contact.html" aria-label="联系我"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></a>
         </div>
       </div>
       <div class="footer-col"><h5>导航</h5><a href="about.html">关于我</a><a href="projects.html">科研项目</a><a href="awards.html">竞赛荣誉</a><a href="experience.html">实践经历</a><a href="statement.html">自述与推荐</a></div>
@@ -217,6 +246,14 @@
   </div>
 </footer>
 <button id="toTop" aria-label="返回顶部"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="图片查看">
+  <button class="lb-close" aria-label="关闭"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+  <img src="" alt="预览图">
+  <div class="lb-cap"><small></small><span class="t"></span></div>
+</div>
+
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="js/main.js"></script>
 </body>
