@@ -4,19 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>科研项目 · 陈晋钦</title>
-<meta name="description" content="陈晋钦的科研项目经历：深度模型水印、侨批数字化、YOLO 视觉系统、多智能体 RAG。">
+<meta name="description" content="陈晋钦的科研项目经历：模型水印、YOLO 视觉系统、多智能体 RAG、侨批数字化与三级大创。">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <nav class="navbar scrolled">
   <div class="container">
-    <a href="index.html" class="logo"><span class="logo-mark">陈</span> 陈晋钦</a>
-    <button class="hamburger" aria-label="菜单"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <a href="index.html" class="logo"><span class="mark">晋</span> 陈晋钦</a>
+    <button class="hamburger" aria-label="菜单"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
     <ul class="nav-links">
-      <li><a href="index.html">首页</a></li><li><a href="about.html">关于我</a></li>
-      <li><a href="projects.html">科研项目</a></li><li><a href="awards.html">竞赛荣誉</a></li>
-      <li><a href="experience.html">实践经历</a></li><li><a href="contact.html">联系我</a></li>
+      <li><a href="index.html">首页</a></li><li><a href="about.html">关于</a></li><li><a href="projects.html">科研</a></li>
+      <li><a href="awards.html">荣誉</a></li><li><a href="experience.html">实践</a></li><li><a href="statement.html">自述</a></li><li><a href="contact.html">联系</a></li>
     </ul>
   </div>
 </nav>
@@ -25,8 +24,8 @@
   <div class="container">
     <div class="breadcrumb"><a href="index.html">首页</a> / 科研项目</div>
     <span class="eyebrow">Research & Projects</span>
-    <h1>科研项目经历</h1>
-    <p>在深度学习、计算机视觉与大模型应用领域的项目实践，涵盖研究、工程落地与学术写作。</p>
+    <h1>科研项目</h1>
+    <p class="lede">从深度学习模型安全、嵌入式视觉到大模型智能体，在真实课题中贯穿研究、工程与学术写作。</p>
   </div>
 </section>
 
@@ -34,50 +33,60 @@
   <div class="container projects-grid">
 
     <article class="project-card reveal">
-      <div class="project-cover cover-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
       <div class="project-body">
-        <span class="p-date">2024.09 — 2025.04 · 深度学习 / 模型安全</span>
+        <span class="project-index">/ 01 — 2024.09 — 2025.04</span>
         <h3>基于编码器-解码器的深度模型水印信息嵌入与提取方案</h3>
-        <p><b>项目概要：</b>针对 DNN 模型知识产权保护场景，为实现可溯源与高鲁棒性，面向频域黑盒水印技术展开研究。</p>
-        <p><b>解决方案：</b>对数据集进行频域叠加初步嵌入，设计基于 UNet 的对称编码器与解码器完成水印融合与提取，并利用 PatchGAN 设计判别器 D1、D2 进行对抗训练以提升性能。个人负责设计对称式水印提取网络与判别器 D2、提取性能评估，并设计损失函数避免模型幻觉。</p>
-        <div class="result">结构相似性指数 <b>&gt;0.95</b>，水印提取成功率 <b>98%+</b>；以第二作者在《机电工程技术》发表论文《基于编码器-解码器的水印信息嵌入和提取方案》。</div>
-        <div class="tags"><span class="tag primary">PyTorch</span><span class="tag teal">UNet</span><span class="tag">PatchGAN</span><span class="tag">频域水印</span></div>
+        <p><span class="gold">概要</span> — 针对 DNN 模型知识产权保护场景，为实现可溯源与高鲁棒性，面向频域黑盒水印技术展开研究。</p>
+        <p><span class="gold">方案</span> — 对数据集进行频域叠加初步嵌入，设计基于 UNet 的对称编码器与解码器完成水印融合与提取，并利用 PatchGAN 设计判别器 D1、D2 对抗训练提升性能。个人负责解码器与提取网络设计、判别器优化及损失函数设计（避免模型幻觉）。</p>
+        <div class="result">结构相似性指数 <b>&gt; 0.95</b>，水印提取成功率 <b>98%+</b>；以第二作者发表于《机电工程技术》。</div>
+        <div class="tags"><span class="tag gold">PyTorch</span><span class="tag">UNet</span><span class="tag">PatchGAN</span><span class="tag">频域水印</span></div>
       </div>
     </article>
 
     <article class="project-card reveal">
-      <div class="project-cover cover-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="8.5" cy="10" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div>
       <div class="project-body">
-        <span class="p-date">2025.08 — 2025.12 · 嵌入式视觉 / 目标检测</span>
+        <span class="project-index">/ 02 — 2025.08 — 2025.12</span>
         <h3>基于 MaixCam 与 YOLO 的智能激光瞄准视觉系统</h3>
-        <p><b>工作概要：</b>负责瞄准模块视觉系统：对模型进行量化，在 MaixCam 上部署 YOLO 检测 A4 靶纸黑色外框，结合 OpenCV 透视变换解算真实靶心坐标，输出偏移量供二维云台完成激光打靶；设计 UART 协议（帧头 / 坐标 / 校验）。</p>
-        <p><b>核心技术栈：</b>MaixCam 视觉、YOLO 部署、Python / C++ / OpenCV / UART。</p>
-        <div class="result">轻量化后 YOLO 模型在 MaixCam 端处理帧率约 <b>20–25 FPS</b>，端到端延迟约 <b>100 ms</b>，获 2025 年全国大学生电子设计竞赛广东赛区三等奖。</div>
-        <div class="tags"><span class="tag primary">YOLO</span><span class="tag teal">OpenCV</span><span class="tag">MaixCam</span><span class="tag">UART</span></div>
+        <p><span class="gold">概要</span> — 负责瞄准模块视觉系统：对模型进行量化，在 MaixCam 端部署 YOLO 检测 A4 靶纸黑色外框，结合 OpenCV 透视变换解算真实靶心坐标，输出偏移量供二维云台完成激光打靶。</p>
+        <p><span class="gold">技术</span> — 设计 UART 协议（帧头 / 坐标 / 校验），技术栈涵盖 Python / C++ / OpenCV / YOLO / MaixCam。</p>
+        <div class="result">轻量化模型端侧帧率 <b>20–25 FPS</b>，端到端延迟约 <b>100 ms</b>；获 2025 全国大学生电子设计竞赛广东赛区三等奖。</div>
+        <div class="tags"><span class="tag gold">YOLO</span><span class="tag">OpenCV</span><span class="tag">MaixCam</span><span class="tag">UART</span></div>
       </div>
     </article>
 
     <article class="project-card reveal">
-      <div class="project-cover cover-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17.5h7M17.5 14v7"/></svg></div>
       <div class="project-body">
-        <span class="p-date">2026.04 — 至今 · 大模型 / 多智能体</span>
+        <span class="project-index">/ 03 — 2026.04 — 至今</span>
         <h3>基于多智能体与 RAG 的 AI 智能面试助手</h3>
-        <p><b>项目概要：</b>面向个性化定制模拟面试需求，基于上传的简历和岗位信息，完成"分析-出题-评分-报告"全流程。</p>
-        <p><b>个人工作：</b>自建文档驱动的向量知识库（975 块 / 19 类 / 170 篇源文件）；将 RAG 接入出题与评分两个生成环节；设计并实现 4 个 LLM Agent，基于 LangGraph 状态图编排；负责人才与岗位双向匹配算法（融合 TF-IDF 语义相似度与关键词覆盖度）；参与 MCP 工具服务化，封装知识库、人才库与联网搜索接口。</p>
-        <div class="result">Top-5 情况下召回率达到 <b>90%+</b>，实现分析-出题（8 题）-逐题评分-报告的完整流程。</div>
-        <div class="tags"><span class="tag primary">RAG</span><span class="tag teal">LangGraph</span><span class="tag">LLM Agent</span><span class="tag">MCP</span></div>
+        <p><span class="gold">概要</span> — 面向个性化定制模拟面试需求，基于上传的简历和岗位信息，完成"分析-出题-评分-报告"全流程。</p>
+        <p><span class="gold">工作</span> — 自建文档驱动向量知识库（975 块 / 19 类 / 170 篇源文件）；将 RAG 接入出题与评分环节；设计 4 个 LLM Agent 并用 LangGraph 状态图编排；负责人才与岗位双向匹配算法（TF-IDF + 关键词覆盖度）；参与 MCP 工具服务化。</p>
+        <div class="result">Top-5 召回率 <b>90%+</b>，实现简历分析-出题（8 题）-逐题评分-报告的完整流程。</div>
+        <div class="tags"><span class="tag gold">RAG</span><span class="tag">LangGraph</span><span class="tag">LLM Agent</span><span class="tag">MCP</span></div>
       </div>
     </article>
 
     <article class="project-card reveal">
-      <div class="project-cover cover-3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
       <div class="project-body">
-        <span class="p-date">2025.08 — 2025.12 · 学术调研 / 数字化</span>
+        <span class="project-index">/ 04 — 2025.08 — 2025.12</span>
         <h3>A Survey of Qiaopi Digital Management（侨批数字化管理综述）</h3>
-        <p><b>工作概要：</b>开展侨批数字化管理全领域调研，系统梳理粤闽地区侨批档案数字化建设现状。</p>
-        <p><b>核心成果：</b>调研涵盖侨批价值数据采集、存储、内容分析、活化利用全流程，总结各地数字化标准不统一、平台兼容性弱、成果共享度低等行业核心痛点，并提供侨批数字化管理全流程建议。</p>
-        <div class="result">以第一作者投稿第六届计算机科学与管理科技国际学术会议（<b>ICCSMT 2025</b>）并获正式录用，<b>EI 检索</b>。</div>
-        <div class="tags"><span class="tag primary">第一作者</span><span class="tag teal">EI 检索</span><span class="tag">学术调研</span></div>
+        <p><span class="gold">概要</span> — 开展侨批数字化管理全领域调研，系统梳理粤闽地区侨批档案数字化建设现状。</p>
+        <p><span class="gold">成果</span> — 调研涵盖侨批价值数据采集、存储、内容分析、活化利用全流程，总结各地数字化标准不统一、平台兼容性弱、成果共享度低等行业核心痛点，并提出全流程管理建议。</p>
+        <div class="result">以第一作者投稿第六届计算机科学与管理科技国际学术会议（<b>ICCSMT 2025</b>）并正式录用，<b>EI 检索</b>。</div>
+        <div class="tags"><span class="tag gold">第一作者</span><span class="tag">EI 检索</span><span class="tag">学术调研</span></div>
+      </div>
+    </article>
+
+    <article class="project-card reveal" style="grid-column:1 / -1">
+      <div class="project-body">
+        <span class="project-index">/ 05 — 2023 — 2026 · 大学生创新创业训练计划</span>
+        <h3>三级大创项目 · 从前端开发到视觉算法的全流程历练</h3>
+        <p>自大一起连续参与<strong class="gold">国家级、省级、校级</strong>三级大学生创新创业训练计划，在不同项目中承担差异化职责，逐层锻炼全流程研发能力。</p>
+        <div class="awards-grid" style="margin-top:1rem;grid-template-columns:repeat(3,1fr)">
+          <div style="padding:1.2rem;border:1px solid var(--line-soft)"><div class="gold serif" style="font-size:1.2rem">国家级项目</div><p style="font-size:.88rem;margin-top:.6rem">负责视觉处理核心模块：数据集制定、研究思路讨论，开展 YOLO 模型训练，实现对特定目标多姿态的检测识别。</p></div>
+          <div style="padding:1.2rem;border:1px solid var(--line-soft)"><div class="gold serif" style="font-size:1.2rem">省级项目</div><p style="font-size:.88rem;margin-top:.6rem">负责竞赛组织与管理统筹，协调团队推进项目落地。</p></div>
+          <div style="padding:1.2rem;border:1px solid var(--line-soft)"><div class="gold serif" style="font-size:1.2rem">校级项目</div><p style="font-size:.88rem;margin-top:.6rem">独立完成前端界面设计与开发，搭建项目交互页面。</p></div>
+        </div>
+        <div class="tags"><span class="tag gold">YOLO 目标检测</span><span class="tag">数据集构建</span><span class="tag">前端开发</span><span class="tag">项目管理</span></div>
       </div>
     </article>
 
@@ -87,11 +96,11 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-mark">陈</span> 陈晋钦</a><p>计算机科学与技术专业学生，专注视觉算法与 AI 应用。用代码解决问题，用分享传递价值。</p></div>
-      <div class="footer-col"><h5>快速导航</h5><a href="about.html">关于我</a><a href="projects.html">科研项目</a><a href="awards.html">竞赛荣誉</a><a href="experience.html">实践经历</a></div>
-      <div class="footer-col"><h5>联系方式</h5><a href="mailto:17833952955@163.com">17833952955@163.com</a><a href="tel:17833952955">17833952955</a><a href="contact.html">留言联系 →</a></div>
+      <div class="footer-brand"><a href="index.html" class="logo"><span class="mark">晋</span> 陈晋钦</a><p>计算机科学与技术专业学生，专注视觉算法与人工智能应用。用代码解决问题，用分享传递价值。</p></div>
+      <div class="footer-col"><h5>导航</h5><a href="about.html">关于我</a><a href="projects.html">科研项目</a><a href="awards.html">竞赛荣誉</a><a href="experience.html">实践经历</a><a href="statement.html">自述与推荐</a></div>
+      <div class="footer-col"><h5>联系</h5><a href="mailto:17833952955@163.com">17833952955@163.com</a><a href="tel:17833952955">17833952955</a><a href="contact.html">留言联系 →</a></div>
     </div>
-    <div class="footer-bottom">© <span id="year"></span> 陈晋钦 · 用心构建的个人主页 · Made with ❤️</div>
+    <div class="footer-bottom">© <span id="year"></span> 陈晋钦 · 用心构建的个人主页</div>
   </div>
 </footer>
 <button id="toTop" aria-label="返回顶部"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
