@@ -171,14 +171,10 @@ img { max-width: 100%; display: block; }
 .portrait .frame::before {
   content: ''; position: absolute; inset: 12px; border: 1px solid var(--line-soft); pointer-events: none;
 }
-.portrait .monogram {
-  font-family: var(--serif); font-size: 8rem; color: var(--gold); opacity: .82; line-height: 1;
-  text-shadow: 0 0 60px rgba(201,168,106,.35);
-}
-.portrait .monogram small { font-size: 3rem; }
 .portrait .tag-vert {
-  position: absolute; right: -38px; top: 50%; transform: translateY(-50%) rotate(90deg);
-  transform-origin: center; font-family: var(--mono); font-size: .68rem; letter-spacing: .35em;
+  position: absolute; right: -30px; top: 8px;
+  writing-mode: vertical-rl; text-orientation: mixed;
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .35em;
   color: var(--muted); text-transform: uppercase; white-space: nowrap;
 }
 .portrait .corner { position: absolute; width: 26px; height: 26px; border-color: var(--gold); }
@@ -449,11 +445,6 @@ img { max-width: 100%; display: block; }
   transition: filter .7s var(--ease), transform .9s var(--ease);
 }
 .portrait:hover .portrait-img { filter: grayscale(0%) contrast(1) brightness(1); transform: scale(1.02); }
-.portrait .monogram-bg {
-  position: absolute; right: 10px; bottom: 6px; z-index: 1;
-  font-family: var(--serif); font-size: 5rem; color: var(--gold); opacity: .12; line-height: 1;
-  pointer-events: none;
-}
 .portrait .frame::after {
   content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background: linear-gradient(200deg, rgba(201,168,106,.12), transparent 45%);
