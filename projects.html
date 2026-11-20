@@ -25,79 +25,192 @@
     <div class="breadcrumb"><a href="index.html">首页</a> / 科研项目</div>
     <span class="eyebrow">Research & Projects</span>
     <h1>科研项目</h1>
-    <p class="lede">从深度学习模型安全、嵌入式视觉到大模型智能体，在真实课题中贯穿研究、工程与学术写作。</p>
+    <p class="lede">从深度学习模型安全、嵌入式视觉到大模型智能体，在真实课题中贯穿研究、工程与学术写作。以下项目配有流程图、实验结果与论文成果。</p>
   </div>
 </section>
 
+<!-- PROJECT 01 · 模型水印 -->
 <section class="section">
-  <div class="container projects-grid">
-
-    <article class="project-card reveal">
-      <div class="project-body">
-        <span class="project-index">/ 01 — 2024.09 — 2025.04</span>
-        <h3>基于编码器-解码器的深度模型水印信息嵌入与提取方案</h3>
-        <p><span class="gold">概要</span> — 针对 DNN 模型知识产权保护场景，为实现可溯源与高鲁棒性，面向频域黑盒水印技术展开研究。</p>
-        <p><span class="gold">方案</span> — 对数据集进行频域叠加初步嵌入，设计基于 UNet 的对称编码器与解码器完成水印融合与提取，并利用 PatchGAN 设计判别器 D1、D2 对抗训练提升性能。个人负责解码器与提取网络设计、判别器优化及损失函数设计（避免模型幻觉）。</p>
-        <div class="result">结构相似性指数 <b>&gt; 0.95</b>，水印提取成功率 <b>98%+</b>；以第二作者发表于《机电工程技术》。</div>
-        <div class="tags"><span class="tag gold">PyTorch</span><span class="tag">UNet</span><span class="tag">PatchGAN</span><span class="tag">频域水印</span></div>
+  <div class="container">
+    <article class="project-detail reveal">
+      <div class="pd-head">
+        <span class="project-index">/ 01 — 2024.09 — 2025.04 · 科研论文</span>
+        <h2>基于编码器-解码器的深度模型水印信息嵌入与提取方案</h2>
+        <div class="pd-meta"><span class="tag gold">第二作者</span><span class="tag">《机电工程技术》2024.06 录用</span><span class="tag">PyTorch</span><span class="tag">UNet</span><span class="tag">PatchGAN</span></div>
       </div>
-    </article>
 
-    <article class="project-card reveal">
-      <div class="project-body">
-        <span class="project-index">/ 02 — 2025.08 — 2025.12</span>
-        <h3>基于 MaixCam 与 YOLO 的智能激光瞄准视觉系统</h3>
-        <p><span class="gold">概要</span> — 负责瞄准模块视觉系统：对模型进行量化，在 MaixCam 端部署 YOLO 检测 A4 靶纸黑色外框，结合 OpenCV 透视变换解算真实靶心坐标，输出偏移量供二维云台完成激光打靶。</p>
-        <p><span class="gold">技术</span> — 设计 UART 协议（帧头 / 坐标 / 校验），技术栈涵盖 Python / C++ / OpenCV / YOLO / MaixCam。</p>
-        <div class="result">轻量化模型端侧帧率 <b>20–25 FPS</b>，端到端延迟约 <b>100 ms</b>；获 2025 全国大学生电子设计竞赛广东赛区三等奖。</div>
-        <div class="tags"><span class="tag gold">YOLO</span><span class="tag">OpenCV</span><span class="tag">MaixCam</span><span class="tag">UART</span></div>
+      <div class="pd-block">
+        <h4><span>研究背景</span></h4>
+        <p>针对深度学习模型版权保护难题，面向深度神经网络模型的知识产权溯源场景，开展模型水印隐写方案研究。传统水印嵌入方式存在三大挑战：<strong>易破坏模型原有精度</strong>、<strong>水印提取抗攻击能力弱</strong>、<strong>嵌入—提取流程不对称难以部署</strong>。</p>
       </div>
-    </article>
 
-    <article class="project-card reveal">
-      <div class="project-body">
-        <span class="project-index">/ 03 — 2026.04 — 至今</span>
-        <h3>基于多智能体与 RAG 的 AI 智能面试助手</h3>
-        <p><span class="gold">概要</span> — 面向个性化定制模拟面试需求，基于上传的简历和岗位信息，完成"分析-出题-评分-报告"全流程。</p>
-        <p><span class="gold">工作</span> — 自建文档驱动向量知识库（975 块 / 19 类 / 170 篇源文件）；将 RAG 接入出题与评分环节；设计 4 个 LLM Agent 并用 LangGraph 状态图编排；负责人才与岗位双向匹配算法（TF-IDF + 关键词覆盖度）；参与 MCP 工具服务化。</p>
-        <div class="result">Top-5 召回率 <b>90%+</b>，实现简历分析-出题（8 题）-逐题评分-报告的完整流程。</div>
-        <div class="tags"><span class="tag gold">RAG</span><span class="tag">LangGraph</span><span class="tag">LLM Agent</span><span class="tag">MCP</span></div>
-      </div>
-    </article>
-
-    <article class="project-card reveal">
-      <div class="project-body">
-        <span class="project-index">/ 04 — 2025.08 — 2025.12</span>
-        <h3>A Survey of Qiaopi Digital Management（侨批数字化管理综述）</h3>
-        <p><span class="gold">概要</span> — 开展侨批数字化管理全领域调研，系统梳理粤闽地区侨批档案数字化建设现状。</p>
-        <p><span class="gold">成果</span> — 调研涵盖侨批价值数据采集、存储、内容分析、活化利用全流程，总结各地数字化标准不统一、平台兼容性弱、成果共享度低等行业核心痛点，并提出全流程管理建议。</p>
-        <div class="project-figure" data-lightbox data-src="assets/img/proj-qiaopi-arch.jpg" data-cap="侨批数字化管理平台架构设计" data-sub="项目架构图">
-          <img src="assets/img/proj-qiaopi-arch.jpg" alt="侨批数字化管理平台架构图" loading="lazy">
-          <div class="figcap"><span>Fig. 侨批文化云平台 · 三层架构</span><b>点击放大 ↗</b></div>
+      <div class="pd-block">
+        <h4><span>方案设计</span></h4>
+        <p>核心采用<strong>对称融合与提取网络</strong>：两个网络均采用 U-Net 对称结构，利用跳跃连接保留图像高频细节，实现水印的无痕嵌入与视觉保真。整体流程分为三阶段：</p>
+        <div class="pd-steps">
+          <div class="pd-step"><span class="n">1</span><div><b>嵌入阶段</b><p>将原始数据集（CIFAR-10）执行傅里叶变换映射至频域，通过叠加触发模式生成初步水印载体，再经 U-Net 融合网络无痕嵌入。</p></div></div>
+          <div class="pd-step"><span class="n">2</span><div><b>训练阶段</b><p>5 个目标模型协同训练；嵌入端用判别器 D1 监督融合网络，逼迫水印藏得更深；提取端用判别器 D2 监督对称 U-Net 提取网络，防止网络"瞎猜"（解决水印幻觉）。</p></div></div>
+          <div class="pd-step"><span class="n">3</span><div><b>提取阶段</b><p>对抗提取 + 验证优化，从含水印模型中还原水印信息并完成版权校验。</p></div></div>
         </div>
-        <div class="project-figure" data-lightbox data-src="assets/img/proj-poster.jpg" data-cap="ICCSMT 2025 会议论文海报" data-sub="学术海报">
-          <img src="assets/img/proj-poster.jpg" alt="ICCSMT 2025 论文海报" loading="lazy">
-          <div class="figcap"><span>Poster · ICCSMT 2025</span><b>点击放大 ↗</b></div>
+        <div class="fig-row">
+          <div class="fig-card" data-lightbox data-src="assets/img/wm-embed-flow.jpg" data-cap="水印嵌入流程图" data-sub="方案设计">
+            <img src="assets/img/wm-embed-flow.jpg" alt="水印嵌入流程图" loading="lazy"><div class="fig-label">图 1 · 水印嵌入流程 <span>点击放大 ↗</span></div>
+          </div>
+          <div class="fig-card" data-lightbox data-src="assets/img/wm-extract-flow.jpg" data-cap="水印提取和验证流程图" data-sub="方案设计">
+            <img src="assets/img/wm-extract-flow.jpg" alt="水印提取和验证流程图" loading="lazy"><div class="fig-label">图 2 · 水印提取与验证流程 <span>点击放大 ↗</span></div>
+          </div>
         </div>
-        <div class="result">以第一作者投稿第六届计算机科学与管理科技国际学术会议（<b>ICCSMT 2025</b>）并正式录用，<b>EI 检索</b>。</div>
-        <div class="tags"><span class="tag gold">第一作者</span><span class="tag">EI 检索</span><span class="tag">学术调研</span></div>
+      </div>
+
+      <div class="pd-block">
+        <h4><span>个人核心贡献</span></h4>
+        <p>负责<strong>提取网络训练以及判别器设计</strong>。在损失函数设计中，于 <span class="mono">L_EXTR = L_wm + λ₂·L_orig</span> 基础上补充了 <span class="mono">L_orig</span> 损失项，避免提取网络产生"幻觉"——即使输入干净图片，也不会强行"脑补"出水印。</p>
+        <p><strong>核心创新：</strong>利用 FFT 将空域转化为频域后，基于 ResNet56 模型的傅里叶误差热力图分析，将频域划分为 0.2–0.8 内的 5 个独立区间，针对不同频段叠加不同触发模式发给不同用户，既实现多用户版权分发，又天然抵御"共谋攻击"。</p>
+        <div class="fig-row">
+          <div class="fig-card" data-lightbox data-src="assets/img/wm-freq-results.jpg" data-cap="频域多路复用 · 不同区间轮次提取效果图" data-sub="核心创新">
+            <img src="assets/img/wm-freq-results.jpg" alt="频域多路复用提取效果图" loading="lazy"><div class="fig-label">图 3 · 频域多路复用 · 不同区间轮次提取效果 <span>点击放大 ↗</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pd-block">
+        <h4><span>实验结果</span></h4>
+        <p>在 VGG19、ResNet20、ResNet56、ResNet110、WideResNet40 五个经典网络上进行 CIFAR-10 基准测试，核心指标 <strong>ESR 均在 98% 以上</strong>，迁移有效。区间消融显示低频段 [0.2, 0.4] 的 ESR 达 <strong>98.72%</strong>，提取质量高于高频段；训练轮次设定为 200 轮（此时 CDA 达到最大值，兼顾目标模型原有能力）。</p>
+        <div class="result-box">结构相似性指数 <b>&gt; 0.95</b> ｜ 水印提取成功率 <b>98%+</b> ｜ 5 个经典模型迁移有效</div>
+        <div class="fig-row three">
+          <div class="fig-card" data-lightbox data-src="assets/img/wm-radar.jpg" data-cap="不同模型下的提取成功率" data-sub="实验结果">
+            <img src="assets/img/wm-radar.jpg" alt="不同模型提取成功率雷达图" loading="lazy"><div class="fig-label">图 4 · 不同模型提取成功率 <span>点击放大 ↗</span></div>
+          </div>
+          <div class="fig-card" data-lightbox data-src="assets/img/wm-model-chart.jpg" data-cap="不同模型不同区间提取成功率" data-sub="实验结果">
+            <img src="assets/img/wm-model-chart.jpg" alt="不同模型不同区间提取成功率柱状图" loading="lazy"><div class="fig-label">图 5 · 不同模型 / 区间提取成功率 <span>点击放大 ↗</span></div>
+          </div>
+          <div class="fig-card" data-lightbox data-src="assets/img/wm-perf-table.jpg" data-cap="CIFAR-10 数据集下各个选定区域的提取性能" data-sub="实验结果">
+            <img src="assets/img/wm-perf-table.jpg" alt="各区间提取性能表" loading="lazy"><div class="fig-label">图 6 · 各区间提取性能（ESR/PSNR/SSIM） <span>点击放大 ↗</span></div>
+          </div>
+        </div>
       </div>
     </article>
+  </div>
+</section>
 
-    <article class="project-card reveal" style="grid-column:1 / -1">
-      <div class="project-body">
+<!-- PROJECT 02 · YOLO 视觉系统 -->
+<section class="section section-alt">
+  <div class="container">
+    <article class="project-detail reveal">
+      <div class="pd-head">
+        <span class="project-index">/ 02 — 2025.08 — 2025.12 · 嵌入式视觉</span>
+        <h2>基于 MaixCam 与 YOLO 的智能激光瞄准视觉系统</h2>
+        <div class="pd-meta"><span class="tag gold">全国大学生电子设计竞赛 广东赛区三等奖</span><span class="tag">YOLO</span><span class="tag">OpenCV</span><span class="tag">MaixCam</span><span class="tag">UART</span></div>
+      </div>
+      <div class="pd-block">
+        <h4><span>工作内容</span></h4>
+        <p>负责瞄准模块的视觉系统：对 YOLO 模型进行量化，在 MaixCam 端部署检测 A4 靶纸黑色外框；结合 OpenCV 透视变换解算真实靶心坐标，输出偏移量供二维云台完成激光打靶。设计 UART 通信协议（帧头 / 坐标 / 校验），实现视觉模块与云台控制模块的可靠通信。</p>
+      </div>
+      <div class="pd-block">
+        <h4><span>技术栈与结果</span></h4>
+        <p>涵盖 Python / C++ / OpenCV / YOLO / MaixCam。轻量化模型端侧帧率达 <strong>20–25 FPS</strong>，端到端延迟约 <strong>100 ms</strong>，满足实时打靶需求。</p>
+        <div class="result-box">端侧帧率 <b>20–25 FPS</b> ｜ 端到端延迟 <b>≈100 ms</b> ｜ 获 2025 电赛广东赛区三等奖</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- PROJECT 03 · RAG AI 面试助手 -->
+<section class="section">
+  <div class="container">
+    <article class="project-detail reveal">
+      <div class="pd-head">
+        <span class="project-index">/ 03 — 2026.04 — 2026.06 · 大模型应用</span>
+        <h2>基于多智能体与 RAG 的 AI 智能面试助手</h2>
+        <div class="pd-meta"><span class="tag gold">LangGraph</span><span class="tag">RAG</span><span class="tag">LLM Agent</span><span class="tag">MCP</span><span class="tag">TF-IDF</span></div>
+      </div>
+      <div class="pd-block">
+        <h4><span>核心工作</span></h4>
+        <p>面向个性化定制模拟面试需求，基于上传的简历和岗位信息，完成"分析—出题—评分—报告"全流程。自建<strong>文档驱动的向量知识库</strong>（975 块 / 19 类 / 170 篇源文件）；将 RAG 接入出题与评分两个生成环节；设计并实现 <strong>4 个 LLM Agent</strong>，基于 LangGraph 状态图编排；负责人才与岗位双向匹配算法（TF-IDF + 关键词覆盖度），并参与 MCP 工具服务化。</p>
+        <div class="fig-row">
+          <div class="fig-card" data-lightbox data-src="assets/img/rag-workflow.jpg" data-cap="RAG 工作流程图" data-sub="核心工作">
+            <img src="assets/img/rag-workflow.jpg" alt="RAG 工作流程图" loading="lazy"><div class="fig-label">图 1 · RAG 工作流程 <span>点击放大 ↗</span></div>
+          </div>
+          <div class="fig-card" data-lightbox data-src="assets/img/rag-agents.jpg" data-cap="多智能体协作流程图" data-sub="核心工作">
+            <img src="assets/img/rag-agents.jpg" alt="多智能体协作流程图" loading="lazy"><div class="fig-label">图 2 · 多智能体协作流程 <span>点击放大 ↗</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="pd-block">
+        <h4><span>项目成果</span></h4>
+        <p>Top-5 召回率达到 <strong>90%+</strong>，实现了"分析—出题（8 题）—逐题评分—报告"的完整闭环流程。</p>
+        <div class="result-box">Top-5 召回率 <b>90%+</b> ｜ 4 个 Agent 协同 ｜ 全流程自动化</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- PROJECT 04 · 侨批数字化 -->
+<section class="section section-alt">
+  <div class="container">
+    <article class="project-detail reveal">
+      <div class="pd-head">
+        <span class="project-index">/ 04 — 2025.08 — 2025.12 · 学术调研</span>
+        <h2>A Survey of Qiaopi Digital Management（侨批数字化管理综述）</h2>
+        <div class="pd-meta"><span class="tag gold">第一作者</span><span class="tag">EI 检索</span><span class="tag">ICCSMT 2025</span><span class="tag">学术调研</span></div>
+      </div>
+      <div class="pd-block">
+        <h4><span>研究背景与现状痛点</span></h4>
+        <p>全球现存侨批 <strong>17 万+</strong>，开展侨批数字化管理全领域调研，系统梳理粤闽地区侨批档案数字化建设现状。调研总结出五大核心痛点：</p>
+        <div class="pd-taggrid">
+          <div><b>识别难度高</b><span>手写 / 方言 / 中英混合识别</span></div>
+          <div><b>标准不统一</b><span>采集存储标准各异</span></div>
+          <div><b>数据孤岛</b><span>跨库检索与数据融合困难</span></div>
+          <div><b>共享度低</b><span>活化利用度低，只存少用</span></div>
+        </div>
+        <div class="fig-row">
+          <div class="fig-card" data-lightbox data-src="assets/img/qiaopi-samples.jpg" data-cap="侨批实物图" data-sub="研究背景">
+            <img src="assets/img/qiaopi-samples.jpg" alt="侨批实物图" loading="lazy"><div class="fig-label">图 1 · 侨批实物 <span>点击放大 ↗</span></div>
+          </div>
+          <div class="fig-card" data-lightbox data-src="assets/img/proj-qiaopi-arch.jpg" data-cap="侨批数字化管理平台架构设计" data-sub="全流程方案">
+            <img src="assets/img/proj-qiaopi-arch.jpg" alt="侨批数字化管理平台架构图" loading="lazy"><div class="fig-label">图 2 · 数字化管理架构 <span>点击放大 ↗</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="pd-block">
+        <h4><span>侨批数字化管理全流程</span></h4>
+        <p>提出覆盖全流程的管理方案：<strong>数据采集层</strong>（专业扫描，统一规格与格式）→ <strong>数据存储层</strong>（统一元数据标准结构化存储，结合云存储弹性扩展与安全备份）→ <strong>内容提取层</strong>（训练侨批专属 OCR 模型）→ <strong>自动分析层</strong>（文本与情感分析挖掘内涵，构建知识图谱）→ <strong>激活利用层</strong>（AIGC 生成新媒体内容，搭建 VR 虚拟与 AI 数字人交互系统）。</p>
+      </div>
+      <div class="pd-block">
+        <h4><span>学术成果</span></h4>
+        <p>论文《A review of the methods for Qiaopi digital management》投稿第六届计算机科学与管理科技国际学术会议（ICCSMT 2025），<strong>以第一作者录用、EI 检索并已见刊</strong>。在学术研究、文献梳理与实践调研等方面取得阶段性成果，为侨批数字化管理提供理论支撑与实践参考。</p>
+        <div class="result-box">第一作者 ｜ ICCSMT 2025 录用 ｜ EI 检索已见刊</div>
+        <div class="fig-row">
+          <div class="fig-card" data-lightbox data-src="assets/img/proj-poster.jpg" data-cap="ICCSMT 2025 会议论文海报" data-sub="学术成果">
+            <img src="assets/img/proj-poster.jpg" alt="ICCSMT 2025 论文海报" loading="lazy"><div class="fig-label">图 3 · 会议论文海报 <span>点击放大 ↗</span></div>
+          </div>
+          <div class="fig-card" data-lightbox data-src="assets/img/qiaopi-acceptance.jpg" data-cap="ICCSMT 2025 论文录用通知" data-sub="学术成果">
+            <img src="assets/img/qiaopi-acceptance.jpg" alt="论文录用通知" loading="lazy"><div class="fig-label">图 4 · 论文录用通知 <span>点击放大 ↗</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- PROJECT 05 · 三级大创 -->
+<section class="section">
+  <div class="container">
+    <article class="project-detail reveal">
+      <div class="pd-head">
         <span class="project-index">/ 05 — 2023 — 2026 · 大学生创新创业训练计划</span>
-        <h3>三级大创项目 · 从前端开发到视觉算法的全流程历练</h3>
-        <p>自大一起连续参与<strong class="gold">国家级、省级、校级</strong>三级大学生创新创业训练计划，在不同项目中承担差异化职责，逐层锻炼全流程研发能力。</p>
-        <div class="awards-grid" style="margin-top:1rem;grid-template-columns:repeat(3,1fr)">
-          <div style="padding:1.2rem;border:1px solid var(--line-soft)"><div class="gold serif" style="font-size:1.2rem">国家级项目</div><p style="font-size:.88rem;margin-top:.6rem">负责视觉处理核心模块：数据集制定、研究思路讨论，开展 YOLO 模型训练，实现对特定目标多姿态的检测识别。</p></div>
-          <div style="padding:1.2rem;border:1px solid var(--line-soft)"><div class="gold serif" style="font-size:1.2rem">省级项目</div><p style="font-size:.88rem;margin-top:.6rem">负责竞赛组织与管理统筹，协调团队推进项目落地。</p></div>
-          <div style="padding:1.2rem;border:1px solid var(--line-soft)"><div class="gold serif" style="font-size:1.2rem">校级项目</div><p style="font-size:.88rem;margin-top:.6rem">独立完成前端界面设计与开发，搭建项目交互页面。</p></div>
+        <h2>三级大创项目 · 从前端开发到视觉算法的全流程历练</h2>
+        <div class="pd-meta"><span class="tag gold">国家级</span><span class="tag gold">省级</span><span class="tag gold">校级</span><span class="tag">YOLO 目标检测</span><span class="tag">项目管理</span></div>
+      </div>
+      <div class="pd-block">
+        <p>自大一起连续参与<strong class="gold">国家级、省级、校级</strong>三级大学生创新创业训练计划，在不同项目中承担差异化职责，逐层锻炼从数据处理到模型部署的全流程研发能力。</p>
+        <div class="pd-taggrid">
+          <div><b>国家级项目</b><span>负责视觉处理核心模块：数据集制定、研究思路讨论，开展 YOLO 模型训练，实现特定目标多姿态检测识别</span></div>
+          <div><b>省级项目</b><span>负责竞赛组织与管理统筹，协调团队推进项目落地</span></div>
+          <div><b>校级项目</b><span>独立完成前端界面设计与开发，搭建项目交互页面</span></div>
         </div>
-        <div class="tags"><span class="tag gold">YOLO 目标检测</span><span class="tag">数据集构建</span><span class="tag">前端开发</span><span class="tag">项目管理</span></div>
       </div>
     </article>
-
   </div>
 </section>
 
